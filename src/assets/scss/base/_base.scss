@@ -1,0 +1,134 @@
+// -----------------------------------------------------------------------------
+// This file contains very basic styles.
+// -----------------------------------------------------------------------------
+
+/**
+ * Set up a decent box model on the root element
+ */
+html {
+  box-sizing: border-box;
+}
+
+html,
+body,
+main {
+  margin: 0;
+}
+
+body {
+  background-color: #FEFEFE;
+  &.opened-menu {
+    overflow: hidden;
+  }
+}
+
+.container {
+  padding: 0 15px;
+}
+
+[class*="col-"] {
+  padding-right: 20px;
+  padding-left: 20px;
+}
+.row {
+  margin-right: -20px;
+  margin-left: -20px;
+}
+
+/**
+ * Make all elements from the DOM inherit from the parent box-sizing
+ * Since `*` has a specificity of 0, it does not override the `html` value
+ * making all elements inheriting from the root box-sizing value
+ * See: https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/
+ */
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  &:hover {
+    text-decoration: none;
+    color: $green;
+  }
+}
+
+img {
+  max-width: 100%;
+}
+
+.btn-reset {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  padding: 0;
+  box-shadow: none;
+  &:focus {
+    outline: none;
+    box-shadow: none;
+  }
+}
+
+.btn {
+  padding: 16px 24px;
+  width: max-content;
+  max-width: 100%;
+  font-size: 18px;
+  color: $white;
+  background-color: $green;
+  border-radius: 100px;
+  svg {
+    margin-left: 7px;
+    width: 7px;
+    height: 10px;
+    transition: transform .3s ease-in-out, fill .3s ease-in-out;
+    fill: currentColor;
+  }
+  &:hover svg {
+    transform: translateX(5px);
+  }
+}
+
+.link-with-arrow {
+  font-weight: 500;
+  font-size: 20px;
+  svg {
+    margin-left: 10px;
+    width: 5px;
+    height: 8px;
+    transition: transform .3s ease-in-out, fill .3s ease-in-out;
+    fill: currentColor;
+  }
+  &:hover svg {
+    transform: translateX(5px);
+  }
+}
+
+.flex {
+  display: flex;
+  &_h-center {
+    align-items: center;
+  }
+  &_w-center {
+    justify-content: center;
+  }
+  &_all-center{
+    align-items: center;
+    justify-content: center;
+  }
+  &_all-sb {
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+
+
+
+
+
+
+
