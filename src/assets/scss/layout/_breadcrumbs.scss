@@ -1,0 +1,12 @@
+.breadcrumbs {
+  margin-top: 30px;
+  margin-bottom: 40px;
+  &__list {
+    display: flex;
+    gap:0 10px;
+  }
+  &__link,
+  &__separator  {
+    color: #6D6D6D;
+  }
+}

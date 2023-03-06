@@ -125,7 +125,27 @@ img {
   }
 }
 
+// tabs
 
+.tabs-content {
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+  overflow: hidden;
+  border: 0;
+  padding: 0;
+  width: 1px;
+
+  clip: rect(0 0 0 0);
+  transition: opacity .5s ease-in-out;
+  &.is-active {
+    position: relative;
+    overflow: visible;
+    width: 100%;
+    opacity: 1;
+    visibility: visible;
+  }
+}
 
 
 

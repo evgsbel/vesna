@@ -47,3 +47,48 @@ $(() => {
     })
   }
 })
+
+
+// tabs
+
+document.addEventListener('DOMContentLoaded', function () {
+  const tabsBtn = document.querySelectorAll('.tabs-btn_disp');
+  tabsBtn.forEach(function (el) {
+    el.addEventListener('click', function (event) {
+
+      tabsBtn.forEach(tabsBtn => {
+        tabsBtn.classList.remove('is-active');
+      });
+
+      const path = event.currentTarget.dataset.path;
+
+      document.querySelectorAll('.tabs-content_disp').forEach(function (tabContent) {
+        tabContent.classList.remove('is-active');
+      });
+      document.querySelector(`[data-target="${path}"]`).classList.add('is-active');
+      el.classList.add('is-active');
+
+    });
+  });
+});
+document.addEventListener('DOMContentLoaded', function () {
+  const tabsBtn = document.querySelectorAll('.tabs-btn_stat');
+  tabsBtn.forEach(function (el) {
+    el.addEventListener('click', function (event) {
+
+      tabsBtn.forEach(tabsBtn => {
+        tabsBtn.classList.remove('is-active');
+      });
+
+      const path = event.currentTarget.dataset.path;
+
+      document.querySelectorAll('.tabs-content_stat').forEach(function (tabContent) {
+        tabContent.classList.remove('is-active');
+      });
+      document.querySelector(`[data-target="${path}"]`).classList.add('is-active');
+      el.classList.add('is-active');
+
+    });
+  });
+});
+
