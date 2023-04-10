@@ -78,10 +78,9 @@ $h6-line-height-touch:          $font-size-base * 1.5;
 $grid-breakpoints: (
   xs: 0,
   sm: 576px,
-  md: 1024px,
-  lg: 1280px,
-  xl: 1440px,
-  xxl: 1680px
+  md: 768px,
+  lg: 1024px,
+  xl: 1800px,
 );
 
 // Grid containers
@@ -89,6 +88,5 @@ $container-max-widths: (
   sm: 100%,
   md: 100%,
   lg: 100%,
-  xl: 1680px,
-  xxl: 1800px
+  xl: 1760px
 );

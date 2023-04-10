@@ -2,6 +2,12 @@
   padding: 60px 0 90px 40px;
   background-color: #2e2e2e;
   color: #fff;
+  @include r(1024) {
+    padding-bottom: 30px;
+  }
+  @include r(576) {
+    padding-left: 0;
+  }
   &__wrapper {
     display: flex;
     flex-direction: column;
@@ -31,6 +37,9 @@
     &:not(:last-child) {
       margin-bottom: 20px;
     }
+    @include r(576) {
+      font-size: 16px;
+    }
   }
   &__btn {
     display: block;
@@ -40,5 +49,13 @@
 .footer-nav {
   display: flex;
   flex-direction: column;
-  gap: 35px 0;
+  gap: 20px 0;
+  @include r(480) {
+    margin-bottom: 30px;
+  }
+  &__caption {
+    margin-bottom: 20px;
+    font-size: 20px;
+    font-weight: 600;
+  }
 }
